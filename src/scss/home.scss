@@ -1,0 +1,75 @@
+//====================================================================================================
+
+.main-section {
+  
+   &__container {
+   }
+
+   &__content {
+     margin-top: rem(185);
+   //   margin-bottom: rem(20);
+   @media (max-width:$mobile){
+       margin-top: rem(120); 
+   }
+   }
+
+   &__title {
+      line-height: math.div(76, 64);
+      font-weight: 700;
+      max-width: rem(488);
+      &:not(:last-child) {
+        margin-bottom: rem(17);
+      }
+      @include adaptiveValue("font-size", 64, 40);
+   }
+
+   &__text {
+      max-width: rem(560);
+      margin-bottom: rem(30);  
+    }
+ 
+	&__actions {
+      display: flex;
+      gap: rem(20);
+      @media (max-width:$mobile){
+         flex-wrap: wrap;
+      }
+	}
+
+	&__button {
+      padding: rem(18) ;
+ 		}
+       .main-section {
+        
+
+         &__items {
+            // display: flex;
+            
+         }
+   }
+   .item-main {
+      padding-top: rem(170);
+      display: flex;
+      gap: rem(10);
+     
+   
+         &__block { width: rem(120);
+            height: rem(45);
+           
+         }
+   }
+   .block { 
+      background-color: #fff;
+      color: $darkColor;
+      display: flex;
+      gap: rem(10);
+      padding: rem(8) rem(14);
+      line-height: math.div(24, 16);
+      font-weight: 600;
+      text-align: center;
+      align-items: center;
+     border-radius: rem(4);
+      }
+   }
+
+//====================================================================================================

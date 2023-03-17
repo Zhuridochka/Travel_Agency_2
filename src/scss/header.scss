@@ -1,0 +1,177 @@
+//====================================================================================================
+.header {
+	// background-color: slategrey;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: rem(15);
+		padding-top: rem(5);
+		padding-bottom: rem(5);
+		min-height: 90px;
+		@media (max-width:$mobile){
+			gap: rem(5); 
+	  }
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 5;
+		font-weight: 600;
+		line-height: math.div(54, 36);
+		@include adaptiveValue("font-size", 36, 25);
+	}
+
+	&__menu {
+		
+	}
+
+	&__action {
+		display: flex;
+		gap: rem(15);
+		align-items: center;
+	}
+
+	&__button {
+		padding: rem(16) rem(47);
+			@media (max-width:$tablet){
+				padding: rem(16) rem(25); 
+			}
+	}
+
+.menu {	
+	// display: flex;
+	// gap: rem(25);	
+
+	&__body {
+		@media (max-width:$mobile){
+			 position: fixed;
+			 top: 0;
+			 left: -100%;
+			 width: 100%; 
+			 height: 100%;
+			 overflow: auto;
+			 transition: left 0.3s ease 0s;
+			 background-color: $yellowColor;
+			 padding: rem(80) rem(15) rem(30) rem(15);
+		&::before{
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: rem(90);
+			background-color: hwb(46 20% 16% / 0.808);
+			z-index: 2;
+		}
+			 .menu-open & {
+				left: 0;
+				&::before{
+					left: 0;
+				}
+			 }
+		}	
+	}
+
+	&__list {
+			@media (min-width: $mobile){
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: rem(5);
+			@include adaptiveValue("column-gap", 35, 10, 0, 1320, 768);	  
+		}	
+	}
+
+	&__item {
+		text-align: center;
+		@media (max-width:$mobile){
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+			}
+		}
+	}
+
+	&__link {
+		font-weight: 600;
+		line-height: math.div(24, 16);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover){
+			&:hover{
+				color: $yellowColor;
+			}
+		}
+		@media (max-width: $mobile){
+			color: #F1F1F1;
+			font-size: rem(28); 
+		}
+	}
+
+	&__icon {
+	}
+	
+}
+
+.icon-menu {
+	
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+}
