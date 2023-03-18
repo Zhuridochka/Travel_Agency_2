@@ -1,8 +1,7 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
 .page {
-//   background-color: #5D9FB3;
-background: url(../img/Banner.jpg) center no-repeat;
+   background: url(../img/Banner.jpg) center no-repeat;
     &__main {
    }
 }
@@ -40,8 +39,8 @@ background: url(../img/Banner.jpg) center no-repeat;
    	transition: all 0.5s ease 0s;
 	@media (any-hover: hover){
 		&:hover{
-			background-color: #dbcfcf;
-			border: rem(1) solid $yellowColor;
+			background-color: #fff;
+			border: rem(1) solid $darkColor;
 		}
 	}
 
@@ -58,6 +57,12 @@ background: url(../img/Banner.jpg) center no-repeat;
    .button-white {
       background-color: #fff;
       padding: rem(18) rem(35);
+      transition: all 0.5s ease 0s;
+      @media (any-hover: hover){
+         &:hover{
+            background-color: $yellowColor;
+         }
+      }
    }
 
    /*------------------------------*/

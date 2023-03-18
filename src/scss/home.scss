@@ -39,37 +39,52 @@
 	&__button {
       padding: rem(18) ;
  		}
-       .main-section {
-        
-
-         &__items {
-            // display: flex;
-            
-         }
+   
+   &__items {
+     
+      }
+      
    }
    .item-main {
-      padding-top: rem(170);
       display: flex;
       gap: rem(10);
-     
+      @include adaptiveValue("padding-top", 170, 70);
+    @media (max-width:$mobile){
+       flex-wrap: wrap; 
+       justify-content: center;
+      }
    
-         &__block { width: rem(120);
-            height: rem(45);
-           
+      &__block {
+         width: rem(120);
+         height: rem(45);
+         background-color: #fff;
+         color: $darkColor;
+         display: flex;
+         gap: rem(10);
+         padding: rem(8) rem(14);
+         line-height: math.div(24, 16);
+         font-weight: 600;
+         text-align: center;
+         align-items: center;
+         border-radius: rem(4);
+         transition: all 0.5s ease 0s;
+        @media (any-hover: hover){
+         &:hover{
+            background-color: $yellowColor;
          }
+        }
+      }
    }
-   .block { 
-      background-color: #fff;
-      color: $darkColor;
-      display: flex;
-      gap: rem(10);
-      padding: rem(8) rem(14);
-      line-height: math.div(24, 16);
-      font-weight: 600;
-      text-align: center;
-      align-items: center;
-     border-radius: rem(4);
+   .block {
+    
+   
+      &__icon {
+      }
+   
+      &__text {
       }
    }
 
 //====================================================================================================
+
+
