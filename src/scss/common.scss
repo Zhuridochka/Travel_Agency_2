@@ -1,31 +1,26 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
 .page {
-   background: url(../img/Banner.jpg) center no-repeat;
-    &__main {
+   position: relative;
+//   &::after{
+//    content: "";
+//    position: absolute;
+//    width: 100%;
+//    height: 100%;
+//    top: 0;
+//    left: 0;
+//    background: url();
+//   }
+   &__main {
+        
    }
 }
-
-/*-----------------------------------------*/
-
-  // &__image-ibg { 
-   //    overflow: hidden;
-   //    width: 100%;
-   //    height: 100%;
-   //    top: 0;
-   //    left: 0;
-   //    img {
-   //       object-position: top;
-   //    }
-   // }
-
-   /*--------------Text----------------*/
+ /*--------------Text----------------*/
    .text {
       line-height: math.div(30, 16);
    }
 
-   /*--------------Button----------------*/
-
+/*--------------Button----------------*/
    .button {
       display: inline-block;
       position: relative;
@@ -52,7 +47,6 @@
          width: 100%;
       }
 	}
-   
 
    .button-white {
       background-color: #fff;

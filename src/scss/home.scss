@@ -1,16 +1,17 @@
 //====================================================================================================
 
 .main-section {
-  
+   
    &__container {
    }
 
-   &__content {
-     margin-top: rem(185);
-   //   margin-bottom: rem(20);
-   @media (max-width:$mobile){
-       margin-top: rem(120); 
-   }
+   &__content { 
+      margin-top: rem(185);
+      position: relative;
+      z-index: 2;
+    @media (max-width:$mobile){
+        margin-top: rem(120); 
+       }
    }
 
    &__title {
@@ -25,66 +26,76 @@
 
    &__text {
       max-width: rem(560);
-      margin-bottom: rem(30);  
-    }
- 
-	&__actions {
+      margin-bottom: rem(30);
+   }
+
+   &__actions {
       display: flex;
       gap: rem(20);
       @media (max-width:$mobile){
          flex-wrap: wrap;
       }
-	}
-
-	&__button {
-      padding: rem(18) ;
- 		}
-   
-   &__items {
-     
-      }
-      
+     &:not(:last-child) {
+     @include adaptiveValue("margin-bottom", 175, 75); 
+     }
    }
-   .item-main {
-      display: flex;
-      gap: rem(10);
-      @include adaptiveValue("padding-top", 170, 70);
-    @media (max-width:$mobile){
-       flex-wrap: wrap; 
-       justify-content: center;
-      }
-   
-      &__block {
-         width: rem(120);
-         height: rem(45);
-         background-color: #fff;
-         color: $darkColor;
+
+   &__button {
+      padding: rem(18);
+   }
+
+   &__items {
+   }
+
+   &__image {
+      position: absolute;
+		width: 100%;
+		min-height: rem(1125);
+		top: 0;
+		left: 0;
+		object-fit: cover;
+      object-position: center;
+		}
+      .item-main-section {
+         position: relative;
+         z-index: 2;
+         // margin: -170px 0px 0px 0px;
          display: flex;
          gap: rem(10);
-         padding: rem(8) rem(14);
-         line-height: math.div(24, 16);
-         font-weight: 600;
-         text-align: center;
-         align-items: center;
-         border-radius: rem(4);
-         transition: all 0.5s ease 0s;
-        @media (any-hover: hover){
-         &:hover{
-            background-color: $yellowColor;
+         // @include adaptiveValue("padding-top", 110, 55);
+         @media (max-width:$mobile){
+             flex-wrap: wrap; 
+             justify-content: center;
          }
-        }
+      
+         &__block {width: rem(120);
+            height: rem(45);
+            background-color: #fff;
+            color: $darkColor;
+            display: flex;
+            gap: rem(10);
+            padding: rem(8) rem(14);
+            line-height: math.div(24, 16);
+            font-weight: 600;
+            text-align: center;
+            align-items: center;
+            border-radius: rem(4);
+            transition: all 0.5s ease 0s;
+           @media (any-hover: hover){
+            &:hover{
+               background-color: $yellowColor;
+               }
+            }
+         }
       }
-   }
-   .block {
-    
-   
-      &__icon {
+      .block {
+      
+         &__icon {
+         }
+      
+         &__text {
+         }
       }
-   
-      &__text {
-      }
-   }
-
-//====================================================================================================
+}
 
 

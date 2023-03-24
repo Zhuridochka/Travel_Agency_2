@@ -1,11 +1,11 @@
 //====================================================================================================
 .header {
-	// background-color: slategrey;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
 	z-index: 100;
+	background-color: rgb(91, 159, 178, 0.75);
 
 	&__container {
 		display: flex;
@@ -42,13 +42,10 @@
 		padding: rem(16) rem(47);
 			@media (max-width:$tablet){
 				padding: rem(16) rem(25); 
-			}
+		}
 	}
 
 .menu {	
-	// display: flex;
-	// gap: rem(25);	
-
 	&__body {
 		@media (max-width:$mobile){
 			 position: fixed;
@@ -58,7 +55,7 @@
 			 height: 100%;
 			 overflow: auto;
 			 transition: left 0.3s ease 0s;
-			 background-color: $yellowColor;
+			 background-color: #348BA7;
 			 padding: rem(80) rem(15) rem(30) rem(15);
 		&::before{
 			content: "";
@@ -67,7 +64,7 @@
 			left: 0;
 			width: 100%;
 			height: rem(90);
-			background-color: hwb(46 20% 16% / 0.808);
+			background-color: rgb(91, 159, 178, 0.75);
 			z-index: 2;
 		}
 			 .menu-open & {
@@ -113,13 +110,13 @@
 	}
 
 	&__icon {
+		}
+	
 	}
-	
-}
 
-.icon-menu {
+	.icon-menu {
 	
-}
+	}
 
 //====================================================================================================
 
