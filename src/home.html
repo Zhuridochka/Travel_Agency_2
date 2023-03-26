@@ -6,9 +6,8 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main data-fp class="page">
-				<section data-fp-section class="page__main main-section">
-					<--!!--- Image----->
+			<main class="page">
+				<section class="page__main main-section">
 					<div class="main-section__image-ibg"><img src="@img/Banner.jpg" alt="Banner"></div >
 					<div class="main-section__container">
 						<div class="main-section__content">
@@ -26,9 +25,9 @@
 						</div>
 					</div>
 				</section>
-		<section data-fp-section class="page__reservation reservation">
+		<section class="page__reservation reservation">
 			<div class="reservation__container">
-				<div class="reservation__body ">
+				<div class="reservation__body">
 					<div class="reservation__items item-reservation">				
 						<div class="item-reservation__block">
 				<div class="block__icon">
@@ -54,6 +53,64 @@
 				</div>
 				<div class="block__text">Ship</div>							
 						</div>
+					</div>
+					<div class="reservation__booking booking-reservation">
+							<div class="booking-reservation__items item-booking-reservation">
+							<div class="item-booking-reservation__body">
+									<div class="item-booking-reservation__destination">Your Destination</div>
+									<div class="item-booking-reservation__name-city"><select name="Country">
+										<option value="Thailand">Thailand</option>
+										<option value="China">China</option>
+										<option value="Korea">Korea</option>
+									</select></div>
+							</div>
+						</div>
+							<div class="booking-reservation__items item-booking-reservation">
+							<div class="item-booking-reservation__body">
+									<div class="item-booking-reservation__destination">Check In</div>
+									<div class="item-booking-reservation__name-city">
+										<input type="date" id="start" name="trip-start" value="2023-01-01" min="2023-01-01" max="2024-12-31" class="input"></div>
+							</div>
+								<!--  -->
+							</div>
+							<div class="booking-reservation__items item-booking-reservation">
+								<div class="item-booking-reservation__body">
+										<div class="item-booking-reservation__destination">Check Out</div>
+										<div class="item-booking-reservation__name-city">
+											<input type="date" id="start" name="trip-start" value="2023-01-14" min="2023-01-01" max="2024-12-31" class="input"></div>
+								</div>
+									<!--  -->
+							</div>
+								<div class="booking-reservation__items item-booking-reservation">
+									<div class="item-booking-reservation__body">
+											<div class="item-booking-reservation__destination">Child</div>
+											<div class="item-booking-reservation__name-city"><select name="Coutry">
+												<option value="number 1">1</option>
+												<option value="number 2">2</option>
+												<option value="number 3">3</option>
+											</select></div>
+									</div>
+										<!-- <input type="date" id="start" name="trip-start" value="2023-01-01" min="2023-01-01" max="2024-12-31" class="input"> -->
+								</div>
+									<div class="booking-reservation__items item-booking-reservation">
+										<div class="item-booking-reservation__body">
+												<div class="item-booking-reservation__destination">Adult</div>
+												<div class="item-booking-reservation__name-city"><select name="Coutry">
+													<option value="number 1">1</option>
+													<option value="number 2">2</option>
+													<option value="number 3">3</option>
+												</select></div>
+										</div>
+											<!-- <input type="date" id="start" name="trip-start" value="2023-01-01" min="2023-01-01" max="2024-12-31" class="input"> -->
+									</div>
+										<div class="booking-reservation__items item-booking-reservation">
+											<div class="item-booking-reservation__body">
+												<div class="booking-reservation__action">
+														<div class="booking-reservation__button button">Book Now</div>
+															<button type="button" class="icon-menu"><span></span></button>
+													</div>
+											</div>
+										</div>
 					</div>
 				</div>
 			</div>
