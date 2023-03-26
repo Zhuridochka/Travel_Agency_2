@@ -5,7 +5,7 @@
 	top: 0;
 	left: 0;
 	z-index: 100;
-	background-color: rgb(91, 159, 178, 0.75);
+	background-color: rgba(62, 127, 145, 0.582);
 
 	&__container {
 		display: flex;
@@ -64,7 +64,7 @@
 			left: 0;
 			width: 100%;
 			height: rem(90);
-			background-color: rgb(91, 159, 178, 0.75);
+			background-color: rgb(52, 139, 167,0.75);
 			z-index: 2;
 		}
 			 .menu-open & {

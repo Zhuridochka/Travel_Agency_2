@@ -8,7 +8,8 @@
 			@@include('html/_header.htm',{})
 			<main data-fp class="page">
 				<section data-fp-section class="page__main main-section">
-					<img class="main-section__image" src="@img/Banner.jpg" alt="Banner">
+					<--!!--- Image----->
+					<div class="main-section__image-ibg"><img src="@img/Banner.jpg" alt="Banner"></div >
 					<div class="main-section__container">
 						<div class="main-section__content">
 							<div class="main-section__title">It’s a Big World
@@ -23,35 +24,40 @@
 							<button type="button" class="main-section__button button ">Get Exploration</button>
 							<button type="button" class="main-section__button button button-white">Read more</button>
 						</div>
-						<div class="main-section__items item-main-section">				
-							<div class="item-main-section__block">
-								<div class="block__icon">
-								<img src="@img/icons/hotel.png" alt="hotel">	
-								</div>
-								<div class="block__text">Hotel</div>							
-							</div>
-							<div class="item-main-section__block">
-								<div class="block__icon">
-								<img src="@img/icons/Flight.png" alt="Flight">	
-								</div>
-								<div class="block__text">Flight</div>							
-							</div>
-							<div class="item-main-section__block">
-								<div class="block__icon">
-								<img src="@img/icons/car.png" alt="car">	
-								</div>
-								<div class="block__text">Car</div>							
-							</div>
-							<div class="item-main-section__block">
-								<div class="block__icon">
-								<img src="@img/icons/Ship.png" alt="Ship">	
-								</div>
-								<div class="block__text">Ship</div>							
-							</div>
+					</div>
+				</section>
+		<section data-fp-section class="page__reservation reservation">
+			<div class="reservation__container">
+				<div class="reservation__body ">
+					<div class="reservation__items item-reservation">				
+						<div class="item-reservation__block">
+				<div class="block__icon">
+				<img src="@img/icons/hotel.png" alt="hotel">	
+				</div>
+				<div class="block__text">Hotel</div>							
+						</div>
+						<div class="item-reservation__block">
+				<div class="block__icon">
+				<img src="@img/icons/Flight.png" alt="Flight">	
+				</div>
+				<div class="block__text">Flight</div>							
+						</div>
+						<div class="item-reservation__block">
+				<div class="block__icon">
+				<img src="@img/icons/car.png" alt="car">	
+				</div>
+				<div class="block__text">Car</div>							
+						</div>
+						<div class="item-reservation__block">
+				<div class="block__icon">
+				<img src="@img/icons/Ship.png" alt="Ship">	
+				</div>
+				<div class="block__text">Ship</div>							
 						</div>
 					</div>
-					
-				</section>
+				</div>
+			</div>
+		</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
