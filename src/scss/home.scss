@@ -1,9 +1,11 @@
 //====================================================================================================
 
 .main-section {
+  
    // background-color: #ec2424;
    
    &__container {
+      padding-bottom: rem(220);
    }
 
    &__content { 
@@ -52,7 +54,7 @@
       overflow: hidden;
       position: absolute;
       width: 100%;
-      height: 160%;
+      height: 150%;
       top: 0;
       left: 0;
       img{
@@ -65,8 +67,7 @@
 
 .reservation {
    background-color: #fff;
-  
-   margin-top: rem(70);
+   // margin-top: rem(70);
 
    &__container {
    }
@@ -84,11 +85,11 @@
 .item-reservation {
    position: relative;
    z-index: 2;
-   margin: -170px 0px 0px 0px;
+   // margin: -170px 0px 0px 0px;
    display: flex;
    gap: rem(10);
-    @include adaptiveValue("padding-top", 175, 55);
-    @include adaptiveValue("margin-top", -170, -70);
+   //  @include adaptiveValue("padding-top", 175, 55);
+   // @include adaptiveValue("padding-top", -170, -70);
    @media (max-width:$mobile){
        flex-wrap: wrap; 
        justify-content: center;
@@ -137,7 +138,7 @@
   }
 
    &__items {
-      // flex: 1 1 auto;
+      
    }
 
    &__action {
@@ -162,20 +163,14 @@
       width: 100%;
       display: inline-block;
    }
-   //  @media (max-width:$mobile){
-   //    row-gap: rem(10);  
-   //  }
-    
-    
+     
    &__body {
        padding: rem(38) rem(25);
        @media (max-width:$mobile){
          padding: rem(20) rem(25);  
        }
-      
-		}
+   }
 
- 
    &__destination {
       background-color:#fefefe;
       color: $darkColor;
@@ -188,19 +183,139 @@
 
    &__name-city {
       min-width: rem(170);
-      padding: rem(20) rem(10);
+      padding: rem(18) rem(10);
       color: #70717B;
       box-shadow: 0 0 6px rgb(228, 226, 238, 1);
       select{
          font-family: "Popins";
-         font-size: rem(18);
-         line-height: math.div(24, 16);
+         font-weight: 700;
+         font-size: rem(16);
+         line-height: math.div(15, 16);
+         color: #70717B;
       }
       input{
          font-size: rem(16);
-         line-height: math.div(24, 16);
+         line-height: math.div(15, 16);
+         color: #70717B;
       }
    }
 }
 
+//========company==========================================================================
+
+.company {
+   padding: rem(95) rem(0) rem(125) rem(0);
+   background: url(../img/Travel.svg) 50% -45px no-repeat;
+
+   &__container {
+      
+   }
+
+   &__inner {
+      display: flex;
+      flex: 0 0 50%;
+   }
+
+  	&__images {
+      padding-right: rem(82);
+		}
+
+
+   &__info {
+   }
+
+   &__image-surf {
+   }
+}
+
+.images-company {
+   display: flex;
+   position: relative;
+   
+  
+    
+   &__photo-1 {
+      overflow: hidden;
+      width: rem(410);
+      height: rem(520);
+      border-radius: rem(14);
+      img{
+         max-width: 100%;
+      }
+   }
+
+   &__photo-2 {
+      overflow: hidden;
+      width: rem(266);
+      align-self: flex-end;
+      img{
+         max-width: 100%;
+      }
+   }
+}
+
+.info-company {
+   padding-right: rem(186);
+   @include adaptiveValue(" padding-right", 185, 85);
+
+   &__body {
+   }
+
+   &__lable {
+   }
+
+   &__content {
+   }
+
+   &__title {
+      max-width: rem(479);
+      color: $darkColor;
+      font-weight: 700;
+      font-size: rem(36);
+      line-height: math.div(48, 36);
+&:not(:last-child) {
+  margin-bottom: rem(29);
+}
+   }
+
+   &__text {
+      color: #9DA1B4;
+      font-weight: 400;
+      line-height: math.div(24, 16);
+      &:not(:last-child) {
+         margin-bottom: rem(19);
+      }
+   }
+
+   &__list {
+   }
+
+   &__items {
+   }
+
+   &__action {
+   }
+
+   &__button {
+      padding: rem(18) rem(39);
+   }
+}
+
+.item-info-company {
+
+   &__aside {
+    
+   }
+}
+.aside {
+
+   &__box {
+   }
+
+   &__date {
+   }
+
+   &__text {
+   }
+}
 
