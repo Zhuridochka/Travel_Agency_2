@@ -33,7 +33,7 @@
    &__actions {
       display: flex;
       gap: rem(20);
-      @media (max-width:$mobile){
+       @media (max-width:$mobile){
          flex-wrap: wrap;
       }
      &:not(:last-child) {
@@ -49,14 +49,14 @@
    }
  
 	&__image-ibg {
-      // overflow: hidden;
+      overflow: hidden;
       position: absolute;
       width: 100%;
       height: 160%;
       top: 0;
       left: 0;
       img{
-         // object-position: top; 
+         object-position: top; 
       }
 	}
 }
@@ -84,17 +84,18 @@
 .item-reservation {
    position: relative;
    z-index: 2;
-   // margin: -170px 0px 0px 0px;
+   margin: -170px 0px 0px 0px;
    display: flex;
    gap: rem(10);
-   @include adaptiveValue("padding-top", 175, 55);
+    @include adaptiveValue("padding-top", 175, 55);
+    @include adaptiveValue("margin-top", -170, -70);
    @media (max-width:$mobile){
        flex-wrap: wrap; 
        justify-content: center;
    }
 
    &__block {
-          width: rem(120);
+         width: rem(120);
          height: rem(45);
          background-color: #fff;
          color: $darkColor;
@@ -105,7 +106,7 @@
          font-weight: 600;
          text-align: center;
          align-items: center;
-         border-radius: rem(4);
+         border-radius: rem(4) rem(4) rem(0) rem(0);
          transition: all 0.5s ease 0s;
         @media (any-hover: hover){
          &:hover{
@@ -124,31 +125,54 @@
    }
 }
 .booking-reservation {
+   background-color: #fff;
    display: flex;
-
+   flex-wrap: wrap; 
+   justify-content: center;
    position: relative;
    z-index: 2;
+   @media (max-width:$tablet){
+     
+     
+  }
 
    &__items {
-      flex: 1 1 auto;
+      // flex: 1 1 auto;
    }
 
    &__action {
       padding-top: rem(33);
+      text-align: center;
+      @media (max-width:$mobileSmall){
+         width: 100%;
+         display: inline-block;
+      }
    }
 
    &__button {
       padding: rem(15) rem(39);
+     
    }
 }
 
 .item-booking-reservation {
     background-color: #fff;
     display: flex;
-    gap: rem(22);
+    @media (max-width:$mobileSmall){
+      width: 100%;
+      display: inline-block;
+   }
+   //  @media (max-width:$mobile){
+   //    row-gap: rem(10);  
+   //  }
+    
     
    &__body {
        padding: rem(38) rem(25);
+       @media (max-width:$mobile){
+         padding: rem(20) rem(25);  
+       }
+      
 		}
 
  
@@ -168,7 +192,13 @@
       color: #70717B;
       box-shadow: 0 0 6px rgb(228, 226, 238, 1);
       select{
+         font-family: "Popins";
+         font-size: rem(18);
+         line-height: math.div(24, 16);
+      }
+      input{
          font-size: rem(16);
+         line-height: math.div(24, 16);
       }
    }
 }
