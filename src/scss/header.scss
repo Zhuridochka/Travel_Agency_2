@@ -1,6 +1,6 @@
 //====================================================================================================
 .header {
-	// position: fixed;
+	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -55,7 +55,7 @@
 			 height: 100%;
 			 overflow: auto;
 			 transition: left 0.3s ease 0s;
-			 background-color: #348BA7;
+			  background-color: #348BA7;
 			 padding: rem(80) rem(15) rem(30) rem(15);
 		&::before{
 			content: "";
@@ -64,7 +64,7 @@
 			left: 0;
 			width: 100%;
 			height: rem(90);
-			background-color: rgb(52, 139, 167,0.75);
+			background-color: rgba(52, 138, 167, 0.795);
 			z-index: 2;
 		}
 			 .menu-open & {
