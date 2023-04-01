@@ -73,10 +73,8 @@
    }
 
    &__body {
-      margin-top: rem(-70);
       box-shadow: 0 6px 24px 0 rgb(228, 226, 238, 1);
-      @include adaptiveValue("margin-top", -70, -15);
-      }
+   }
 
    &__items {
    }
@@ -196,9 +194,11 @@
    display: flex;
    position: relative;
    padding: rem(95) rem(0) rem(125) rem(0);
-   background: url(../img/Travel.svg) 50% -45px no-repeat;
+   background: url(../img/company/03.svg) right 70% no-repeat, url(../img/Travel.svg) 50% -5% no-repeat;
+  
 
    &__container {
+     
    }
 
    &__inner {
@@ -219,15 +219,15 @@
    &__info {
    }
 
-   &__image-surf {
-      display: flex;
-      position: relative;
-      // accent-color: flex-end;
-      max-width: 351px;
-      max-height: 442px;
-      // overflow: hidden;
-      background: url('@img/company/03.png') 0 0 no-repeat;
-   }
+   // &__image-surf {
+   //    display: flex;
+   //    position: relative;
+   //    // accent-color: flex-end;
+   //    max-width: 351px;
+   //    max-height: 442px;
+   //    // overflow: hidden;
+   //    background: url('@img/company/03.png') 0 0 no-repeat;
+   // }
 }
 
 .images-company {
@@ -302,7 +302,6 @@
    &__list {
      
          li{
-            // position: relative;
             line-height: math.div(36, 16);
             color: #9DA1B4;
          &:not(:last-child) {
