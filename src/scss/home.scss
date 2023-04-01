@@ -193,6 +193,7 @@
 //========company==========================================================================
 
 .company {
+   display: flex;
    position: relative;
    padding: rem(95) rem(0) rem(125) rem(0);
    background: url(../img/Travel.svg) 50% -45px no-repeat;
@@ -212,7 +213,7 @@
    }
 
   	&__images {
-      // padding-right: rem(82);
+      
 		}
 
    &__info {
@@ -220,10 +221,11 @@
 
    &__image-surf {
       display: flex;
-      justify-content: flex-end;
+      position: relative;
+      // accent-color: flex-end;
       max-width: 351px;
-      height: 442px;
-      overflow: hidden;
+      max-height: 442px;
+      // overflow: hidden;
       background: url('@img/company/03.png') 0 0 no-repeat;
    }
 }
@@ -241,17 +243,13 @@
       }
    }
 
-   &__photo-2 {display: block;
+   &__photo-2 {
+      display: block;
       overflow: hidden;
       align-self: flex-end;
       margin-left: rem(-95);
       margin-bottom: rem(-45);
-      // @media (max-width: rem(1049)){
-      //    align-self: auto;
-      //    margin-left: 0;
-      //    margin-bottom: 0;
-      //  }
-      img{
+         img{
          max-width: 100%;  
       }
       
@@ -259,14 +257,12 @@
 }
 
 .info-company {
-  
-   // @include adaptiveValue("padding-right", 185, 85);
+    // @include adaptiveValue("padding-right", 185, 85);
 
    &__body {
       display: flex;
       flex-direction: column;
-      
-   }
+     }
 
    &__lable {
       font-family: $fontFamilyQuick;
@@ -304,12 +300,23 @@
    }
 
    &__list {
-      line-height: math.div(36, 16);
-      color: #9DA1B4;
-     &:not(:last-child) {
-      margin-bottom: rem(10);
-     }
-   }
+     
+         li{
+            // position: relative;
+            line-height: math.div(36, 16);
+            color: #9DA1B4;
+         &:not(:last-child) {
+             margin-bottom: rem(10);
+            }
+         }
+         li::before{
+            content: "";
+            left: 0;
+            top: 0;
+            background: url(../img/icons/icon.svg) left no-repeat;
+            padding-left: rem(35);
+           }
+}
 
    &__items {
       width: rem(88);
@@ -323,7 +330,12 @@
 
    &__button {
       padding: rem(18) rem(39);
-   }
+      text-align: center;
+      @media (max-width:rem(1049)){
+        margin-bottom: rem(20);
+        width: 100%;
+       }
+     }
 }
 
 .item-info-company {
